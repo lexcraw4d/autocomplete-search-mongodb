@@ -1,3 +1,5 @@
+
+
 const express = require('express')
 const app = express()
 const cors = require('cors')
@@ -39,7 +41,7 @@ app.get("/search", async (request,response) => {
                 }
             }
         ]).toArray()
-        //console.log(result)
+        // console.log(result)
         response.send(result)
     } catch (error) {
         response.status(500).send({message: error.message})
